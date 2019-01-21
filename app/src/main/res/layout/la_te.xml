@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="?attr/recycleview_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:id="@+id/tv_name"
+        android:gravity="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/sp_16"
+        android:text="@string/app_name"
+        android:drawablePadding="@dimen/dp_4"
+        android:padding="@dimen/dp_10"
+        android:drawableLeft="@mipmap/an_ciwei"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        app:layout_constraintTop_toBottomOf="@+id/tv_name"
+        android:id="@+id/tv_skin"
+        android:gravity="center"
+        android:drawablePadding="@dimen/dp_4"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/sp_16"
+        android:text="夜间模式"
+        android:padding="@dimen/dp_10"
+        android:drawableLeft="@mipmap/an_dog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <com.moxun.tagcloudlib.view.TagCloudView
+        android:id="@+id/tagCloud"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginEnd="8dp"
+        app:autoScrollMode="uniform"
+        app:darkColor="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_skin"
+        app:lightColor="@color/colorPrimary"
+        app:radiusPercent="0.7"
+        app:scrollSpeed="2" />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:shadowColor="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_skin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_skin" />
+
+    <TextView
+        android:id="@+id/tv_go"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/goLoginorRegist"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/tv_name"
+        app:layout_constraintTop_toTopOf="@+id/tv_name"
+        app:layout_constraintVertical_bias="0.472" />
+</android.support.constraint.ConstraintLayout>

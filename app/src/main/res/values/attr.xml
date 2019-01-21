@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CircleProgress">
+        <attr name="in_circle_color" format="color"/>
+    </declare-styleable>
+    <attr name="main_bg" format="reference|color"/>
+    <attr name="toolbar_bg" format="reference|color"/>
+    <attr name="main_textcolor" format="reference|color"/>
+    <attr name="titlecolor" format="reference|color"/>
+    <attr name="contentcolor" format="reference|color"/>
+    <attr name="bottom_bg" format="reference|color"/>
+    <attr name="bottom_untextcolor" format="reference|color"/>
+    <attr name="bottom_textcolor" format="reference|color"/>
+    <attr name="recycleview_bg" format="reference|color"/>
+    <attr name="navigation_bg" format="reference|color"/>
+</resources>

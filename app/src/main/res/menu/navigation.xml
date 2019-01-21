@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@mipmap/ic_home"
+        android:title="首页"
+        />
+    <item
+        android:id="@+id/navigation_project"
+        android:icon="@mipmap/ic_project"
+        android:title="项目"
+        />
+    <item
+        android:id="@+id/navigation_system"
+        android:icon="@mipmap/ic_system"
+        android:title="体系"
+        />
+    <item
+        android:id="@+id/navigation_na"
+        android:icon="@mipmap/ic_nav"
+        android:title="导航"
+        />
+    <item
+        android:id="@+id/navigation_mine"
+        android:icon="@mipmap/ic_mine"
+        android:title="我的"
+        />
+</menu>

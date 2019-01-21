@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">玩安卓</string>
+    <string name="browser_menu_item_star">收藏</string>
+    <string name="browser_menu_item_share">分享</string>
+    <string name="browser_menu_item_reload">刷新</string>
+    <string name="browser_menu_item_copy_link">复制链接</string>
+    <string name="browser_menu_item_open_in_browser">在浏览器中打开</string>
+    <string name="share_source">分享自玩安卓</string>
+    <string name="share_dialog_title">分享</string>
+    <string name="menu_item_search">搜索</string>
+    <string name="search_view_hint">请输入关键词进行搜索</string>
+    <string name="clear_history_alert_dialog_message">确定清除所有的记录吗?</string>
+    <string name="goLoginorRegist">前往登录或者注册</string>
+    <string name="unLogin">未登录</string>
+    <string name="exitLogin">退出登录</string>
+</resources>

@@ -1,0 +1,55 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlNormal">@android:color/white</item>
+    </style>
+    <style name="FullScreenTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+    <style name="SearchViewToolbar" parent="ThemeOverlay.AppCompat.ActionBar">
+        <item name="android:searchHintIcon" tools:ignore="NewApi">@null</item>
+        <item name="android:queryBackground" tools:ignore="NewApi">@null</item>
+    </style>
+    <style name="ToolbarTheme" parent="Theme.AppCompat.Light">
+    <!-- 设置 toolbar 溢出菜单的文字的颜色 -->
+    <item name="android:textColor">@android:color/darker_gray</item>
+    <item name="actionMenuTextColor">@android:color/white</item>
+    <item name="colorButtonNormal">@android:color/white</item>
+    <item name="colorControlNormal">@android:color/white</item>
+    </style>
+    <style name="day_theme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="main_bg">@color/ed</item>
+        <item name="toolbar_bg">@color/colorPrimary</item>
+        <item name="main_textcolor">@color/white</item>
+        <item name="bottom_bg">@color/white</item>
+        <item name="bottom_textcolor">@color/colorPrimary</item>
+        <item name="bottom_untextcolor">@color/color_99</item>
+        <item name="titlecolor">@color/colorPrimary</item>
+        <item name="contentcolor">@color/color_99</item>
+        <item name="recycleview_bg">@color/white</item>
+        <item name="navigation_bg">@color/ed</item>
+    </style>
+
+    <style name="night_theme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryDark">@color/dark</item>
+        <item name="main_bg">@color/ed</item>
+        <item name="toolbar_bg">@color/bg_main_dark</item>
+        <item name="main_textcolor">@color/textcolor_main_dark</item>
+        <item name="bottom_bg">@color/dark</item>
+        <item name="bottom_textcolor">@color/white</item>
+        <item name="bottom_untextcolor">@color/color_99</item>
+        <item name="titlecolor">@color/color_title</item>
+        <item name="contentcolor">@color/color_99</item>
+        <item name="recycleview_bg">@color/color_2b</item>
+        <item name="navigation_bg">@color/dark</item>
+    </style>
+</resources>
