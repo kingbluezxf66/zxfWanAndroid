@@ -14,6 +14,7 @@ import com.example.zxf.myapp.R;
 import com.example.zxf.myapp.base.BaseMVPActivity;
 import com.example.zxf.myapp.base.BasePresenter;
 import com.example.zxf.myapp.helper.DataBaseHelper;
+import com.example.zxf.myapp.ui.activity.MainActivity;
 
 import javax.inject.Inject;
 
@@ -88,5 +89,6 @@ public class LoginActivity extends BaseMVPActivity<LoginContract.Presenter> impl
         showToast("登录成功");
         dataBaseHelper.saveUserInfo(getUsername(), getPassword(), true);
         AppActivitManager.getAppActivityManager().finishActivity(this);
+        startActivity(MainActivity.class);
     }
 }
