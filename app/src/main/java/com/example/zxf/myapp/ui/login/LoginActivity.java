@@ -53,7 +53,7 @@ public class LoginActivity extends BaseMVPActivity<LoginContract.Presenter> impl
                 mPresenter.goLogin(getUsername(), getPassword());
                 break;
             case R.id.tv_regist:
-                mPresenter.goLogin(getUsername(), getPassword());
+                mPresenter.goRegist();
                 break;
         }
 
