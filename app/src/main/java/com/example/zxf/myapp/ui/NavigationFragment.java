@@ -103,7 +103,7 @@ public class NavigationFragment extends BaseFragment {
         }else{
             fragmentTransaction.replace(R.id.frameLayout, navigationRightFragment);
         }
-        fragmentTransaction.commit();
+        fragmentTransaction.commitAllowingStateLoss();
     }
 
 }
