@@ -77,23 +77,36 @@ public class MineFragment extends BaseFragment {
         TasPublicAdapter textTagsAdapter = new TasPublicAdapter(nameList);
         tagCloud.setAdapter(textTagsAdapter);
         SPUtils spUtils = SPUtils.getInstance("theme");
-        int theme = spUtils.getInt("theme");
+        int theme = spUtils.getInt("theme",0);
         if (theme == 0) {
             switch1.setChecked(false);
         } else {
             switch1.setChecked(true);
         }
-        switch1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+//        switch1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+//            @Override
+//            public void onCheckedChanged(CompoundButton compoundButton, boolean checked) {
+//                //1 夜间模式 0 白天
+//                if (checked) {
+//                    spUtils.put("theme", 1);
+//                } else {
+//                    spUtils.put("theme", 0);
+//                }
+//                getActivity().recreate();
+//            }
+//        });
+        switch1.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean checked) {
-                if (checked) {
+            public void onClick(View v) {
+                if(theme==0){
                     spUtils.put("theme", 1);
-                } else {
+                }else{
                     spUtils.put("theme", 0);
                 }
                 getActivity().recreate();
             }
         });
+
     }
 
     @Nullable

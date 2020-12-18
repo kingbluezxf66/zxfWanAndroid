@@ -1,5 +1,6 @@
 package com.example.zxf.myapp.network;
 
+import com.example.zxf.myapp.BuildConfig;
 import com.example.zxf.myapp.model.BannerBean;
 import com.example.zxf.myapp.model.BaseResponse;
 import com.example.zxf.myapp.model.HomeAticleBean;
@@ -22,7 +23,8 @@ import retrofit2.http.Path;
 import retrofit2.http.Query;
 
 public interface RequestInterface {
-    public String baseUrl = "http://www.wanandroid.com";
+//    public String baseUrl = "https://www.wanandroid.com";
+    public String baseUrl = BuildConfig.HostUrl;
 
     /**
      * 注册方法

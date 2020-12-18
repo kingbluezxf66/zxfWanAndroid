@@ -1,5 +1,6 @@
 apply plugin: 'com.android.application'
 apply plugin: 'realm-android'
+apply from: "config.gradle"
 android {
     compileSdkVersion 28
     defaultConfig {
@@ -11,13 +12,36 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         ndk {
             //设置支持的SO库架构
-            abiFilters 'armeabi' , "armeabi-v7a" //, 'x86',  'x86_64', 'arm64-v8a'
+            abiFilters 'armeabi', "armeabi-v7a" //, 'x86',  'x86_64', 'arm64-v8a'
         }
+    }
+    signingConfigs {
+        release {
+            keyAlias "wanandroid"
+            keyPassword "wanandroid"
+            storeFile file('../app/key/wanandroid.jks')
+            storePassword "wanandroid"
+        }
+//        debug {
+//            keyAlias DEBUG_KEY_ALIAS
+//            keyPassword DEBUG_KEY_PASSWORD
+//            storeFile file('../app/key/wanandroid.jks')
+//            storePassword DEBUG_KEYSTORE_PASSWORD
+//        }
     }
     buildTypes {
         release {
+            //不运行混淆文件
             minifyEnabled false
+            buildConfigField "String", "HostUrl", "\"${url["releaseUrl"]}\""
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+        debug {
+            //影响安装的包名，在原有的包名后加.bug 可解决一个手机安装两个应用包（但注意签名文件，以及三方申请）
+//            applicationIdSuffix '.debug'
+            signingConfig signingConfigs.release
+            buildConfigField "String", "HostUrl", "\"${url["debugUrl"]}\""
         }
     }
     compileOptions {
@@ -25,7 +49,7 @@ android {
         targetCompatibility 1.8
     }
     //Data Binding
-    dataBinding{
+    dataBinding {
         enabled = true
     }
 }

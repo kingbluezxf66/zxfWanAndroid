@@ -21,7 +21,7 @@ public class NavigationLeftAdapter extends BaseQuickAdapter<NavigationBean, Base
     public NavigationLeftAdapter(@Nullable List<NavigationBean> data) {
         super(R.layout.item_navigation_left, data);
         SPUtils spUtils = SPUtils.getInstance("theme");
-        theme = spUtils.getInt("theme");
+        theme = spUtils.getInt("theme",0);
     }
 
     public void setPosition(int selectPosition) {

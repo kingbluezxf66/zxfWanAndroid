@@ -1,0 +1,6 @@
+ext {
+    url = [
+            "debugUrl"  : "https://www.wanandroid.com",
+            "releaseUrl": "https://www.wanandroid.com"
+    ]
+}
